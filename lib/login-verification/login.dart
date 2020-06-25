@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'input.dart';
 import 'checkbox.dart';
+import 'verification.dart';
 
 class Login extends StatelessWidget {
   @override
@@ -9,15 +10,10 @@ class Login extends StatelessWidget {
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
     ]);
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-        statusBarColor: Colors.transparent,
-        statusBarIconBrightness: Brightness.dark,
-        systemNavigationBarColor: Colors.white,
-        systemNavigationBarIconBrightness: Brightness.dark));
-
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
@@ -47,7 +43,12 @@ class Login extends StatelessWidget {
               padding: EdgeInsets.only(top: 25.0, left: 50.0, right: 50.0),
               child: RaisedButton(
                 color: Color(0xFF1B1A34),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Verification()),
+                  );
+                },
                 padding: EdgeInsets.all(20.0),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10.0),
