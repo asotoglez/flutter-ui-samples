@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'login-verification/login.dart';
+import 'marketing-app/create-campaign.dart';
 import 'package:flutter/services.dart';
 
 
@@ -114,13 +115,25 @@ class _MyHomePageState extends State<MyHomePage> {
 
       switch(index) {
         case 0: {
-          title = "Login & Verification";
+        title = "Login & Verification";
+        level = "Easy";
+        color = Colors.green;
+        tap = () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Login()),
+          );
+        };
+      }
+        break;
+        case 1: {
+          title = "Marketing App";
           level = "Easy";
           color = Colors.green;
           tap = () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => Login()),
+              MaterialPageRoute(builder: (context) => CreateCampaign()),
             );
           };
         }
@@ -146,7 +159,7 @@ class _MyHomePageState extends State<MyHomePage> {
           SliverList(
             delegate: SliverChildBuilderDelegate(
                   (context, index) => createItem(index),
-              childCount: 1
+              childCount: 2
             ),
           ),
         ],

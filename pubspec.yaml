@@ -86,3 +86,18 @@ flutter:
     - family: Roboto-Bold
       fonts:
         - asset: fonts/Roboto/Roboto-Bold.ttf
+    - family: Muli-Regular
+      fonts:
+        - asset: fonts/Muli/Muli-Regular.ttf
+    - family: Muli-Bold
+      fonts:
+        - asset: fonts/Muli/Muli-Bold.ttf
+    - family: Muli-SemiBold
+      fonts:
+        - asset: fonts/Muli/Muli-SemiBold.ttf
+  assets:
+    - assets/icon/search.png
+    - assets/icon/search.svg
+    - assets/icon/close.png
+    - assets/icon/photo.jpg
+    - assets/icon/log-out.png
